@@ -5,9 +5,10 @@ const usuarios = [
         idade: 20,
         email: "adryanwallace@gmail.com",
         cpf: "123.456.789-00",
-        senha: "123456",
+        username: "adryan",
+        password: "123456",
         plano: "Cuidado Total",
-        papel: "admin"
+        role: "admin"
     },
     {
         id: 2,
@@ -15,9 +16,10 @@ const usuarios = [
         idade: 25,
         email: "joao.silva@gmail.com",
         cpf: "987.654.321-00",
-        senha: "123456",
+        username: "joao",
+        password: "123456",
         plano: "Essencial",
-        papel: "user"
+        role: "user"
     },
     {
         id: 3,
@@ -25,9 +27,10 @@ const usuarios = [
         idade: 30,
         email: "maria.souza@gmail.com",
         cpf: "456.789.123-00",
-        senha: "123456",
+        username: "maria",
+        password: "123456",
         plano: "Cuidado+",
-        papel: "user"
+        role: "user"
     }
 ];
 
