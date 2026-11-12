@@ -77,7 +77,22 @@ const authorizeAdmin = (req, res, next) => {
     next();
 };
 
+app.get("/planos", (req, res) => {
+    res.json(planos);
+});
 
+app.get("/protected", authenticateToken, (req, res) => {
+    res.json({ message: "Acesso concedido a rota protegida" });
+});
+
+app.get("/user", authenticateToken, (req, res) => {
+    const dados = user.find((u) => u.id === req.user.id);
+    res.json(dados);
+});
+
+app.get("/admin", authenticateToken, authorizeAdmin, (req, res) => {
+    res.json(admin);
+});
 
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
